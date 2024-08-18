@@ -17,6 +17,16 @@ function display_quiz() {
             choices: ["answer 1", "answer 2", "answer 3", "answer 4"],
             up_score: ["Te", "Fe", "Se", "Ne"]
         }, 
+        {
+            question: "insert 2nd question here", 
+            choices: ["answer 1", "answer 2", "answer 3", "answer 4"],
+            up_score: ["Te", "Fe", "Se", "Ne"]
+        },
+        {
+            question: "insert 3rd question here", 
+            choices: ["answer 1", "answer 2", "answer 3", "answer 4"],
+            up_score: ["Te", "Fe", "Se", "Ne"]
+        }
     ]
     const intro_func_TeFe_q = [
         {
@@ -67,12 +77,13 @@ function display_quiz() {
         // update scores based on selected choice
         if (current_q_list == extro_func_q) {
             if (selected_up_score == "Te") {
-                if ((extro_func_points["Te"] += 1) == 1) {
-                    current_q_index++;
+                if ((extro_func_points["Te"] += 1) == 3) {
                     current_q_list = intro_func_TeFe_q;
                     current_q_index = 0;
                     mbti_letters[2] = "T"
                     console.log("yippee")
+                } else {
+                    current_q_index++;
                 }
             }
         }
